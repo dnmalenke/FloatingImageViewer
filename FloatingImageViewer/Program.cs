@@ -54,13 +54,13 @@ namespace FloatingImageViewer
                 Close();
             };
 
-            _pictureBox.ContextMenuStrip.Items.Add("Maximize").Click += (s, e) =>
+            _pictureBox.ContextMenuStrip.Items.Add("Fullscreen").Click += (s, e) =>
             {
                 WindowState = WindowState == FormWindowState.Maximized ? WindowState = FormWindowState.Normal : FormWindowState.Maximized;
                 ToolStripMenuItem? menuItem = (ToolStripMenuItem?)s;
                 if (menuItem != null)
                 {
-                    menuItem.Text = WindowState == FormWindowState.Maximized ? "Un-Maximize" : "Maximize";
+                    menuItem.Text = WindowState == FormWindowState.Maximized ? "Exit Fullscreen" : "Fullscreen";
                 }
             };
 
